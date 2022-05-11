@@ -1,0 +1,46 @@
+.Nav {
+
+    background-color: rgb(0, 0, 0);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+
+    top: 0;
+    
+    margin: auto;
+
+    position: sticky;
+
+    width: 100%;
+
+    z-index: 2;
+
+    padding: 10px;
+
+    -webkit-transition: height 0.2s ease-in-out;
+
+    transition: height 0.2s ease-in-out;
+
+    height: 55px;
+
+  }
+
+  .Nav-brand{
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+  }
+
+ .img-logo{
+     margin: auto;
+     width: 100%,
+ }
+
+ .dropdown{
+     padding: 20px;
+ }
+
+ .img-icon{
+     border-radius: 100%;
+ }
