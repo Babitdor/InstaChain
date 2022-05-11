@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# InstaChain - Blockchain Based Instagram Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built using Solidity and React JS 
 
 ## Available Scripts
 
