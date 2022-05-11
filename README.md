@@ -6,6 +6,16 @@ This project was built using Solidity and React JS
 
 In the project directory, you can run:
 
+### `npm install`
+
+To install all the necessary packages.
+
+## `Open Ganache`
+Link an account of Ganache to your Metamask Wallet in localhost
+
+## `truffle migrate --reset
+To migrate the contracts to Ganache Blockchain
+
 ### `npm start`
 
 Runs the app in the development mode.\
