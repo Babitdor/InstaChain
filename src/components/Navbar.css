@@ -1,8 +1,10 @@
 .Nav {
 
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    border-bottom: 2px solid rgba(0, 0, 0, 0.0975);
 
     top: 0;
     
@@ -10,37 +12,92 @@
 
     position: sticky;
 
-    width: 100%;
+    width: 500;
+
+    height: auto;
 
     z-index: 2;
-
+    
     padding: 10px;
+
+    height: 55px;
 
     -webkit-transition: height 0.2s ease-in-out;
 
-    transition: height 0.2s ease-in-out;
-
-    height: 55px;
+    transition: height 0.5s ease-in-out;
 
   }
 
   .Nav-brand{
       margin: auto;
+      height: 55px;
       display: flex;
+      position: sticky;
       justify-content: space-around;
       align-items: center;
       flex-direction: row;
   }
 
  .img-logo{
-     margin: auto;
-     width: 100%,
+     width: 50%;
  }
 
  .dropdown{
-     padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(255, 255, 255);
+ }
+
+ .container-drop{
+    background: rgb(34,193,195); background: linear-gradient(135deg, rgb(13, 40, 66) 0%, rgb(161, 94, 206) 100%);
+    padding: 20px;
+    margin: 0;
+ }
+
+ .act-title{
+     font-weight: 400;
  }
 
  .img-icon{
      border-radius: 100%;
  }
+
+ .img-logo-eth{
+    width: 30%;
+ }
+
+ .act-container{
+     
+     padding: 20px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
+ .act-heading{
+     font-weight: 500;
+ }
+
+
+ @media only screen and (min-width: 0px) and (max-width:555px){
+
+    .Nav {
+        position: relative;
+        width: 550px;
+        height: auto;
+        margin: auto;
+        transition: 0.5s;
+        box-sizing: border-box;
+        background: #fafafa;
+        box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+ }
+
+ 

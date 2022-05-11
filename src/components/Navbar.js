@@ -1,8 +1,10 @@
 import './Navbar.css'
 import * as React from 'react'
 import logo from '../assets/logo.png'
+import eth from '../assets/eth.png'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
+import meta from '../assets/meta.png'
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 
 function Navbar({balances,accounts}) {
@@ -27,7 +29,7 @@ function Navbar({balances,accounts}) {
 
                  
 
-                   <div><img src={logo} alt="" className='img-logo'></img></div>
+                   <div className='img-container'><img src={logo} alt="" className='img-logo'/></div>
                    <div>
                        <Button
                             id="basic-button"
@@ -35,7 +37,7 @@ function Navbar({balances,accounts}) {
                             aria-haspopup="true"
                             aria-expanded={open ? 'true' : undefined}
                             onClick={handleClick}>
-                            <PersonPinIcon fontSize='large'/>
+                            <PersonPinIcon fontSize='large' color='secondary'/>
                         </Button>
                         <Menu
                             id="basic-menu"
@@ -45,9 +47,13 @@ function Navbar({balances,accounts}) {
                             MenuListProps={{
                             'aria-labelledby': 'basic-button',
                         }}>
+                            
+                            <div className='container-drop'>
                             <div className='dropdown'>
-                            <h5>Account : {accounts}</h5>
-                            <h5>Balance : {balances}</h5>
+                              
+                              <div className='act-container'><img src={meta} alt="" className='img-logo-eth'/><h3 className='act-heading'>Account</h3><h5 className='act-title'>{accounts}</h5></div>
+                              <img src={eth} alt="" className='img-logo-eth'/><h5>{balances}</h5>
+                            </div>
                             </div>
                         </Menu>
                     </div>

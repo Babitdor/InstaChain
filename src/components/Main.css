@@ -8,15 +8,17 @@
 
     margin-bottom: 40px;
 
-    border-radius: 20px;
+    border-radius: 30px;
 
     margin-top: 10px;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    margin-left : 35%;
+    margin-left : 32%;
 
-    margin-right: 35%;
+    margin-right: 32%;
+
+    transition: 0.5s ease-in-out;
 
   }
 
@@ -32,9 +34,8 @@
 
   .Post-user-profilepicture {
 
-    width: 30px;
-
-    height: 30px;
+    width: 50px;
+    height: 50px;
 
   }
 
@@ -54,20 +55,24 @@
 
     font-family: 'PT Sans', sans-serif;
 
-    font-weight: bold;
+    font-weight: 400;
 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   }
 
   .Post-image-bg {
 
-    background-color: #efefef;
+    background-color: #ffffff;
+    padding: 20px;
 
   }
 
   .Post-image img {
 
     display: block;
-
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     width: 100%;
 
   }
@@ -80,18 +85,56 @@
 
   .Post-caption strong {
 
-    font-family: 'PT Sans', sans-serif;
-
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
     font-weight: bold;
-
   }
 
-  @media only screen and (max-width: 1600px) {
-    .Post{
-    padding: 10px;
-    margin-left : auto;
-    margin-right: auto;
+  
+
+@media only screen and (max-width: 1600px) {
+  .Post {
+
+    border-radius: 3px;
+
+    border: 1px solid #e6e6e6;
+
+    background-color: #fff;
+
+    margin-bottom: 40px;
+
+    border-radius: 30px;
+
+    margin-top: 10px;
+
+    margin-bottom: 10px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    margin: auto;
+
+    width: 550px;
+
+  }
+  .Post-image img {
+
+    display: block;
+
+  }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .Post {
+      border-radius: 0px;
+      margin-top: 20px;
     }
   }
-  
+
+  @media only screen and (min-width: 600px) and (max-width:1599px) {
+    .Post {
+      border-radius: 30px;
+      margin-top: 20px;
+    }
+  }
+
 

@@ -5,6 +5,7 @@ import { Component } from 'react';
 // import Post from './Components/Post'
 import Web3 from 'web3';
 import * as IPFS from 'ipfs-http-client'
+import Loading from './components/Loading';
 // import {create} from 'ipfs-http-client'
 
 const ipfs = IPFS.create({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
@@ -133,8 +134,12 @@ class App extends Component {
   render() {
         return (
           <div className="App">
-            <Navbar balances={this.state.balance} accounts={this.state.account}/>
-            <Main  captureFile={this.captureFile} uploadImage={this.uploadImage} images={this.state.images} tipImageOwner={this.tipImageOwner}/>
+            { this.state.loading ? <Loading/>
+              :<div>
+              <Navbar balances={this.state.balance} accounts={this.state.account}/>
+              <Main  captureFile={this.captureFile} uploadImage={this.uploadImage} images={this.state.images} tipImageOwner={this.tipImageOwner}/>
+              </div>
+          }
           </div>
         );
     }

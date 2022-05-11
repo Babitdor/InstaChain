@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import img1 from '../assets/2.jpg'
 import './Main.css'
+// import Identicon from 'identicon.js';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import Button from '@mui/material/Button';
 import Post from "./Post";
 export default class Main extends Component {
 
@@ -21,7 +24,7 @@ export default class Main extends Component {
 
                 <div className="Post-user-profilepicture">
 
-                  <img src={img1} alt="John D. Veloper" />
+                  <img src={img1} alt="profile-pic" />
 
                 </div>
 
@@ -39,14 +42,15 @@ export default class Main extends Component {
 
               <div className="Post-image-bg">
 
-                <img alt="Icon Living" src={`https://ipfs.infura.io/ipfs/${image.hash}`} />
+                <img alt="posted-im" src={`https://ipfs.infura.io/ipfs/${image.hash}`} />
 
               </div>
 
             </div>
 
             <div className="Post-caption">
-
+                
+              <Button><FavoriteIcon fontSize='large' color='secondary'/></Button>
               <strong>{image.description}</strong> 
 
             </div>
@@ -57,11 +61,7 @@ export default class Main extends Component {
             );
         })}
         </div>
-        )
-
-      
-      
-      
+        )    
       }
     }
         
