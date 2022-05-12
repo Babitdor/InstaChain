@@ -5,7 +5,7 @@ import eth from '../assets/eth.png'
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import meta from '../assets/meta.png'
-import PersonPinIcon from '@mui/icons-material/PersonPin';
+import Identicon from 'identicon.js';
 
 function Navbar({balances,accounts}) {
     
@@ -37,7 +37,7 @@ function Navbar({balances,accounts}) {
                             aria-haspopup="true"
                             aria-expanded={open ? 'true' : undefined}
                             onClick={handleClick}>
-                            <PersonPinIcon fontSize='large' color='secondary'/>
+                            <img src={`data:image/png;base64,${new Identicon(accounts, 30).toString()}`} alt="profile-pic" className='img-profile'/>
                         </Button>
                         <Menu
                             id="basic-menu"
@@ -51,8 +51,8 @@ function Navbar({balances,accounts}) {
                             <div className='container-drop'>
                             <div className='dropdown'>
                               
-                              <div className='act-container'><img src={meta} alt="" className='img-logo-eth'/><h3 className='act-heading'>Account</h3><h5 className='act-title'>{accounts}</h5></div>
-                              <img src={eth} alt="" className='img-logo-eth'/><h5>{balances}</h5>
+                              <div className='act-container'><img src={meta} alt="" className='img-logo-meta'/><h3 className='act-heading'>Account</h3><h5 className='act-title'>{accounts}</h5></div>
+                              <img src={eth} alt="" className='img-logo-eth'/><h5 className='bal'>{balances} ETH</h5>
                             </div>
                             </div>
                         </Menu>

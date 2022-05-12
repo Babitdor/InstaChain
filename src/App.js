@@ -34,7 +34,7 @@ class App extends Component {
     const web3 = window.web3
     // Load account and Balances
     const accounts = await web3.eth.getAccounts()
-    const eth_value = await web3.eth.getBalance(accounts[0])/Math.pow(10,18)
+    const eth_value = Math.round(await web3.eth.getBalance(accounts[0])/Math.pow(10,18),3)
     this.setState({ balance : eth_value })
     this.setState({ account: accounts[0] })
     
@@ -67,56 +67,55 @@ class App extends Component {
     }
   }
 
-  captureFile = event => {
+  captureFile = async(event) => {
 
-    event.preventDefault()
+    // event.preventDefault()
     const file = event.target.files[0]
     const reader = new window.FileReader()
     reader.readAsArrayBuffer(file)
+    this.setState({fileupload : file },()=>{
+      console.log(this.state.fileupload)
+    })
+    
 
-    reader.onloadend = () => {
-      this.setState({ buffer: Buffer(reader.result) })
-      console.log('buffer', this.state.buffer)
-    }
+    // reader.onloadend = () => {
+    //   this.setState({ buffer: Buffer(reader.result) })
+    //   console.log('buffer', this.state.buffer)
+    // }
   }
 
   
   uploadImage = async(description) => {
+    
     console.log("Submitting file to ipfs...")
 
     //Uploading file to the IPFS
+      await ipfs.add(this.state.fileupload)
+      .then((result) => {
+        console.log('Ipfs Result',result)
+        const imageid = result.path
+        this.state.decentragram.methods.uploadImage(imageid, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
     
-      try{
-      const uploadedResult = await ipfs.add((this.state.buffer))
-      this.setState({result: uploadedResult.path })
-      console.log('Ipfs result', uploadedResult)
-      }catch(e) {
-        console.log(e)
-      }
-      this.setState({ loading: true })
-      this.state.decentragram.methods.uploadImage(this.state.result, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
-      this.setState({ loading: false })
-      
-    
+    })
   })
 }
 
   tipImageOwner(id, tipAmount) {
-    this.setState({ loading: true })
+    // this.setState({ loading: true })
     this.state.decentragram.methods.tipImageOwner(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
-      this.setState({ loading: false })
+      // this.setState({ loading: false })
     })
   }
 
   constructor(props) {
     super(props)
     this.state = {
+      fileupload:null,
       balance: '',
       account: '',
       decentragram: null,
       images: [],
       loading: true,
-      result: '',
     }
 
     this.uploadImage = this.uploadImage.bind(this)
@@ -125,13 +124,8 @@ class App extends Component {
   }
 
 
-
-
-
-
-
-
-  render() {
+  render() 
+  {
         return (
           <div className="App">
             { this.state.loading ? <Loading/>

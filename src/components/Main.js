@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import img1 from '../assets/2.jpg'
 import './Main.css'
-// import Identicon from 'identicon.js';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import Identicon from 'identicon.js';
 import Button from '@mui/material/Button';
 import Post from "./Post";
+import {AiFillHeart} from 'react-icons/ai'
 export default class Main extends Component {
 
       render() {
@@ -24,7 +23,7 @@ export default class Main extends Component {
 
                 <div className="Post-user-profilepicture">
 
-                  <img src={img1} alt="profile-pic" />
+                  <img src={`data:image/png;base64,${new Identicon(image.author, 30).toString()}`} alt="profile-pic" />
 
                 </div>
 
@@ -50,8 +49,13 @@ export default class Main extends Component {
 
             <div className="Post-caption">
                 
-              <Button><FavoriteIcon fontSize='large' color='secondary'/></Button>
-              <strong>{image.description}</strong> 
+              <div className="btn"><Button
+                name={image.id}
+                onClick={(event) => {
+                let tipAmount = window.web3.utils.toWei('0.1', 'Ether')
+                console.log(event.currentTarget.name, tipAmount)
+                this.props.tipImageOwner(event.currentTarget.name, tipAmount)}}><AiFillHeart color="red" fontSize={40}/></Button></div>
+                <strong className="caption">{image.description}</strong> 
 
             </div>
 

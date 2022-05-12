@@ -48,7 +48,7 @@
     align-items: center;
     flex-direction: column;
     width: 350px;
-    height: 450px;
+    height: 500px;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgb(255, 255, 255);
@@ -68,8 +68,14 @@
      border-radius: 100%;
  }
 
+ .img-logo-meta{
+    width: 30%;
+ }
  .img-logo-eth{
     width: 30%;
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 1px;
  }
 
  .act-container{
@@ -81,6 +87,18 @@
  }
  .act-heading{
      font-weight: 500;
+ }
+
+ .bal{
+     font-size: 15px
+ }
+
+ .img-profile{
+     border-radius: 100%;
+     width: 100%;
+     border-style: solid;
+     border-width: 2px;
+     border-color: rgba(0, 0, 0, 0.822);
  }
 
 

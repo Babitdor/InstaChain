@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "InstaChain",
+  "name": "An Instagram Clone using a Decentralized Server",
   "icons": [
     {
       "src": "favicon.ico",
