@@ -5,8 +5,14 @@ The Likes system in instagram, is replaced using a Tip feature. Where if you lik
 Basically similar to how you support a content creator.
 
 It was built using Solidity and React JS. <br>
-Web3Js was used to Autheticate/Retrieve Crypto Wallet Data.
-Ganache was used as the testing Blockchain Enivornment.
+
+Web3Js was used to Autheticate/Retrieve Crypto Wallet Data.<br>
+
+Ganache was used as the testing Blockchain Enivornment.<br>
+
+Chai and chai-as-promised was used for testing the Solidity contracts.
+
+Truffle was used to Compile/Deploy the contracts to the Blockchain.
 
 ## Available Scripts
 
