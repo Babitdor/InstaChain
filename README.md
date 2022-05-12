@@ -1,4 +1,4 @@
-# InstaChain - Blockchain Based Instagram Application
+# InstaChain
 ## Description
 <br>A Decentralized Instagram Platform, which allows a user to share Images, Videos.
 The Likes system is basically a Support/Donate feature. Where if you like a Post, you provide a tip of 0.1 ETH.
