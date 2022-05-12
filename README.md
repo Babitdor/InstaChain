@@ -1,10 +1,15 @@
 # InstaChain - Blockchain Based Instagram Application
+## Description
+<br>A Decentralized Instagram Platform, which allows a user to share Images, Videos.
+The Likes system is basically a Support/Donate feature. Where if you like a Post, you provide a tip of 0.1 ETH.
+Basically supporting a content creator.
 
-A Decentralized Instagram Platform, which allows a user to share Images, Videos.
-The Likes system in instagram, is replaced using a Tip feature. Where if you like a Post, you provide a tip of 0.1 ETH to the Profile.
-Basically similar to how you support a content creator.
-
-It was built using Solidity and React JS. <br>
+## Tools Used
+![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+<br>It was built using Solidity and React JS. <br>
 
 Web3Js was used to Autheticate/Retrieve Crypto Wallet Data.<br>
 
