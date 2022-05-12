@@ -15,6 +15,9 @@ Chai and chai-as-promised was used for testing the Solidity contracts.
 Truffle was used to Compile/Deploy the contracts to the Blockchain.
 
 ## Screenshots ![InstaChain](https://user-images.githubusercontent.com/57758789/168140247-c547831a-6857-4303-a21b-af6b61ccd5ff.png)
+![Login](https://user-images.githubusercontent.com/57758789/168141759-f39aa5fc-691c-4510-b9f0-b26a0ae0147d.png)
+![InstaChain](https://user-images.githubusercontent.com/57758789/168141772-69d5f078-9357-41b6-99ec-47e17ae1cf72.png)
+
 
 ## Available Scripts
 
