@@ -1,6 +1,12 @@
 # InstaChain - Blockchain Based Instagram Application
 
-This project was built using Solidity and React JS 
+A Decentralized Instagram Platform, which allows a user to share Images, Videos.
+The Likes system in instagram, is replaced using a Tip feature. Where if you like a Post, you provide a tip of 0.1 ETH to the Profile.
+Basically similar to how you support a content creator.
+
+It was built using Solidity and React JS. 
+Web3Js was used to Autheticate/Retrieve Crypto Wallet Data.
+Ganache was used as the testing Blockchain Enivornment.
 
 ## Available Scripts
 
